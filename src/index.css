@@ -13,22 +13,28 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a:hover {
-  
-}
+
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #333;
+  font-size: 1rem;
+}
+a:hover {
   
 }
 
@@ -43,4 +49,16 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* 
+a:focus,
+a:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
 
+ul {
+  list-style: none;
+}
+
+#root {
+  width: 100%;
+}
