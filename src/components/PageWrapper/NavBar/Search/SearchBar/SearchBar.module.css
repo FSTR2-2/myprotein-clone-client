@@ -1,0 +1,64 @@
+.container {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  z-index: 99;
+
+  width: 100%;
+  background-color: #e9e2d8;
+}
+
+.inputBox {
+  height: 5rem;
+  padding: 1.25rem;
+
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border-radius: .75rem;
+  border: none;
+  padding: .5rem;
+
+  font-size: 1rem;
+  color: #333;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: #333;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translateY(-50%)
+}
+
+.crossIconBox {
+  /* border: 1px solid red; */
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+
+  background: white;
+
+  position: relative;
+  z-index: 99;
+}
+
+.crossIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
