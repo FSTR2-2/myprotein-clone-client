@@ -4,6 +4,10 @@
   transition: transform .3s ease-in-out;
   aspect-ratio: 1;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button:hover {
   transform: scale(1.1)

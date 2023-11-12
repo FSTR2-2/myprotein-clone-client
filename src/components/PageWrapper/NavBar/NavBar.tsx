@@ -3,18 +3,19 @@ import { Link } from "react-router-dom";
 
 import { BiChevronRight } from "react-icons/bi";
 import { GrMenu } from "react-icons/gr";
-import { GoPerson } from "react-icons/go";
 import { BsBasket3 } from "react-icons/bs";
 import { MdHome } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 
 import Button from "../../Button/Button";
-import Search from './Search/Search'
+import MobileSearchPopup from './MobileSearchPopup/MobileSearchPopup'
+import MobileUnderlay from './MobileUnderlay/MobileUnderlay';
+import MobileAccountPopup from './MobileAccountPopup/MobileAccountPopup';
+
 import { images } from "../../../assets/index";
 import { type Pages } from "../../../lib/types";
 
 import styles from "./NavBar.module.css";
-import MobileUnderlay from './MobileUnderlay/MobileUnderlay';
 
 const NavBar = () => {
 	const [isMenuActive, setIsMenuActive] = useState(false);
@@ -50,15 +51,13 @@ const NavBar = () => {
 					<Button handleClick={activateMenu}>
 						<GrMenu className={styles.icon} />
 					</Button>
-					<Search />
+					<MobileSearchPopup />
 				</div>
 				<Link to="/" className={styles.logoBox}>
 					<img src={images.logo} alt="logo" className={styles.logo} />
 				</Link>
 				<div className={styles.iconContainer}>
-					<Link to="/accountHome" className={styles.accountIcon}>
-						<GoPerson className={styles.icon} />
-					</Link>
+					<MobileAccountPopup />
 					<Button>
 						<BsBasket3 className={styles.icon} />
 					</Button>
@@ -68,7 +67,7 @@ const NavBar = () => {
 				<>
 					<div className={styles.mobileMenu}>
 						<div className={styles.navIcons}>
-							<Link to='/'>
+							<Link to='/' onClick={deactivateMenu}>
 								<MdHome className={styles.icon} />
 							</Link>
 							<Button handleClick={deactivateMenu}>
